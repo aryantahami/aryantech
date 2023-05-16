@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.template.loader import render_to_string
 
 
-def myhttp(request):
-    return HttpResponse("hello aryan")
+def myblog(request):
+    return render(request, 'blog/blog.html')
